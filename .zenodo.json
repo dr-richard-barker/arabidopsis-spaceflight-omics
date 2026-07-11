@@ -27,7 +27,7 @@
     {
       "name": "Barker, Richard",
       "affiliation": "GeneLab Plant Analysis Working Group, NASA Open Science Data Repository",
-      "orcid": "0000-0000-0000-0000"
+      "orcid": "0000-0002-8368-2825"
     }
   ],
   "related_identifiers": [
@@ -50,5 +50,5 @@
       "scheme": "other"
     }
   ],
-  "notes": "Data sources: NASA OSDR studies OSD-37, OSD-678, OSD-38, OSD-321, OSD-120, OSD-624 (bulk RNA-seq); GEO GSE226097 seed-to-seed single-cell atlas (Lee et al., Nature Plants 2025). Methods build on scPlantLLM (Cao et al., 2025), PlantCellChat, and ggPlantmap (Jo & Kajala, 2024). Results are discovery-only; no external validation cohort. Replace the placeholder ORCID and add co-authors before minting the DOI."
+  "notes": "Data sources: NASA OSDR studies OSD-37, OSD-678, OSD-38, OSD-321, OSD-120, OSD-624 (bulk RNA-seq); GEO GSE226097 seed-to-seed single-cell atlas (Lee et al., Nature Plants 2025). Methods build on scPlantLLM (Cao et al., 2025), PlantCellChat, and ggPlantmap (Jo & Kajala, 2024). Results are discovery-only; no external validation cohort. Add co-authors here before minting the DOI if the author list expands."
 }

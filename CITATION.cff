@@ -6,8 +6,7 @@ authors:
   - given-names: Richard
     family-names: Barker
     affiliation: "GeneLab Plant Analysis Working Group, NASA Open Science Data Repository"
-    # TODO: replace with real ORCID before minting the Zenodo DOI
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+    orcid: "https://orcid.org/0000-0002-8368-2825"
 repository-code: "https://github.com/dr-richard-barker/arabidopsis-spaceflight-omics"
 abstract: >
   A multi-track computational pipeline for identifying spaceflight-responsive
