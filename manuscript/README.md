@@ -9,6 +9,7 @@ LASSO biomarker panel and single-cell atlas integration reveals Ca2+-dominated c
 - `manuscript.docx` — Word format manuscript (all sections; ~5,700 words incl. figure legends)
 - `manuscript.pdf` — PDF version of the manuscript
 - `manuscript_with_figures.docx` — Word manuscript with all 8 figures embedded inline (review-friendly)
+- `manuscript_with_figures_ACTIVE_DRAFT.docx` — **active working draft** (in progress, ~6,900 words); expanded text under revision. The frozen `manuscript.docx` / `manuscript_with_figures.docx` remain the reference submission versions until this draft is finalised.
 
 ### Main Figures (`figures/`)
 8 main figures in PNG (300 dpi) and SVG (editable vector) formats:
