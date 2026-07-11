@@ -6,12 +6,12 @@ LASSO biomarker panel and single-cell atlas integration reveals Ca2+-dominated c
 ## Contents
 
 ### Main Manuscript
-- `manuscript.docx` — text-only manuscript, figures referenced separately (~5,700 words)
-- `manuscript.pdf` — PDF of the text-only manuscript
-- `manuscript_with_figures.docx` — expanded manuscript with all 8 figures embedded inline (~6,900 words; current revision)
-- `manuscript_with_figures_ACTIVE_DRAFT.docx` — **active working draft** (~6,900 words); latest in-progress revision
+- `manuscript.docx` — text-only manuscript, figures referenced separately (~6,900 words)
+- `manuscript.pdf` — PDF of the text-only manuscript (23 pp)
+- `manuscript_with_figures.docx` — same expanded text with all 8 figures embedded inline (~6,900 words)
+- `manuscript_with_figures_ACTIVE_DRAFT.docx` — **active working draft** (~6,900 words); latest in-progress revision (identical body text to `manuscript_with_figures.docx`)
 
-> Note: the text is mid-revision — `manuscript.docx`/`.pdf` are the earlier ~5,700-word version; the two `*_with_figures*` docs are the expanded ~6,900-word revision. Reconcile `manuscript.docx` (and regenerate the PDF) to the expanded text before final submission.
+> All four files now share the same expanded ~6,900-word text; `manuscript.docx`/`.pdf` are the reference submission versions (figures separate), the `*_with_figures*` docs embed figures for review convenience.
 
 ### Main Figures (`figures/`)
 8 main figures in PNG (300 dpi) and SVG (editable vector) formats:
