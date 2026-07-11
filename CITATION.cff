@@ -31,8 +31,8 @@ keywords:
   - GO enrichment
   - NASA OSDR
 license: MIT
-version: 2.0.0
-date-released: "2026-07-08"
+version: 2.0.1
+date-released: "2026-07-11"
 preferred-citation:
   type: article
   title: "Spaceflight Biomarker Discovery and Single-Cell Atlas Integration in Arabidopsis thaliana"
