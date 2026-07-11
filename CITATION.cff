@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+title: "Arabidopsis Spaceflight Omics: Biomarker Discovery and Single-Cell Atlas Integration"
+message: "If you use this software or data, please cite it as below."
+type: software
+authors:
+  - given-names: Richard
+    family-names: Barker
+    affiliation: "GeneLab Plant Analysis Working Group, NASA Open Science Data Repository"
+    # TODO: replace with real ORCID before minting the Zenodo DOI
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/dr-richard-barker/arabidopsis-spaceflight-omics"
+abstract: >
+  A multi-track computational pipeline for identifying spaceflight-responsive
+  biomarker genes in Arabidopsis thaliana using NASA OSDR transcriptomic data,
+  validating them against a single-cell seedling atlas with scPlantLLM, and
+  characterizing cell-cell communication patterns with PlantCellChat. The LASSO
+  biomarker panel (85 genes, AUC=0.734) reveals stress/ER-proteostasis enrichment
+  in flight-upregulated genes and flavonoid metabolism in ground-upregulated genes.
+  Ca2+ signaling dominates cell-cell communication (strength=249.5, 10.2x over K+).
+  A CBL9-CIPK23-AKT1 crosstalk circuit connects Ca2+ sensing to K+ uptake, with
+  guard cells as the primary signaling hub. Includes Sankey diagram, ggPlantmap
+  spatial montage, and full supplementary methods.
+keywords:
+  - Arabidopsis thaliana
+  - spaceflight
+  - single-cell RNA-seq
+  - LASSO regression
+  - cell-cell communication
+  - PlantCellChat
+  - scPlantLLM
+  - ggPlantmap
+  - GO enrichment
+  - NASA OSDR
+license: MIT
+version: 2.0.0
+date-released: "2026-07-08"
+preferred-citation:
+  type: article
+  title: "Spaceflight Biomarker Discovery and Single-Cell Atlas Integration in Arabidopsis thaliana"
+  authors:
+    - given-names: Richard
+      family-names: Barker
+      affiliation: "GeneLab Plant Analysis Working Group"
+  journal: "npj Microgravity (submitted)"
+  year: 2026

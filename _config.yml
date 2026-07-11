@@ -1,0 +1,11 @@
+# GitHub Pages configuration (root-served Jekyll)
+# Enable at: Settings -> Pages -> Source: Deploy from a branch -> main -> / (root)
+#
+# index.md is the landing page. It references figures at manuscript/figures/...,
+# so those paths must remain reachable in the built site (do not exclude them).
+title: Arabidopsis Spaceflight Omics
+description: >-
+  LASSO biomarker discovery, scPlantLLM single-cell atlas integration, and
+  Ca2+-dominated cell-cell communication in the Arabidopsis spaceflight response.
+theme: jekyll-theme-cayman
+show_downloads: true

@@ -1,0 +1,7 @@
+study,n_samples,n_flight,n_ground,ecotype,tissue
+OSD-120,24,12,12,"Col-0,Unknown",root
+OSD-321,10,5,5,Col-0,seedling
+OSD-37,56,28,28,"Ws,Cvi-0,Ler-0,Col-0",seedling
+OSD-38,6,3,3,Col-0,seedling
+OSD-624,36,18,18,Unknown,"leaf,root"
+OSD-678,24,12,12,"Col-0,Unknown",seedling

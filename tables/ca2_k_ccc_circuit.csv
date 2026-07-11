@@ -1,0 +1,26 @@
+source,target,source_organ,target_organ,ca2_strength,k_strength,total_strength,ca2_dominant
+Guard,Meristematic,Cotyledon/leaf (stomata),Root tip,12.137874616947471,0.8565247194532505,12.994399336400722,True
+Guard,Guard,Cotyledon/leaf (stomata),Cotyledon/leaf (stomata),12.099323089669332,0.8147401202143116,12.914063209883643,True
+Guard,Epidermal,Cotyledon/leaf (stomata),All organs (surface),11.202408842044228,0.9717699849414129,12.17417882698564,True
+Guard,Stele,Cotyledon/leaf (stomata),Root/hypocotyl (vascular),11.08539987764027,0.9234357711566726,12.008835648796943,True
+Meristematic,Guard,Root tip,Cotyledon/leaf (stomata),11.048587044624542,0.859799404209168,11.90838644883371,True
+Epidermal,Guard,All organs (surface),Cotyledon/leaf (stomata),10.604606792631836,1.1566447510274915,11.761251543659327,True
+Epidermal,Meristematic,All organs (surface),Root tip,10.475733207289654,1.1885318197063026,11.664265026995956,True
+Meristematic,Meristematic,Root tip,Root tip,10.760540238625154,0.879206409223352,11.639746647848506,True
+Guard,Mesophyll,Cotyledon/leaf (stomata),Cotyledon/leaf,10.599520769427421,0.7835936611679598,11.38311443059538,True
+Epidermal,Epidermal,All organs (surface),All organs (surface),9.697879504864778,1.3518165686485362,11.049696073513314,True
+Mesophyll,Guard,Cotyledon/leaf,Cotyledon/leaf (stomata),10.25468631274898,0.7195800154051707,10.974266328154151,True
+Meristematic,Epidermal,Root tip,All organs (surface),9.930057448727394,1.002752935932003,10.932810384659398,True
+Epidermal,Stele,All organs (surface),Root/hypocotyl (vascular),9.565399127134528,1.2812783535781704,10.846677480712698,True
+Mesophyll,Meristematic,Cotyledon/leaf,Root tip,10.042458890169929,0.7367217232279342,10.779180613397862,True
+Meristematic,Stele,Root tip,Root/hypocotyl (vascular),9.80784484304883,0.9489868546217828,10.756831697670613,True
+Stele,Guard,Root/hypocotyl (vascular),Cotyledon/leaf (stomata),9.507964380332142,1.1222584611286426,10.630222841460785,True
+Stele,Meristematic,Root/hypocotyl (vascular),Root tip,9.385947866700736,1.1407154250192926,10.526663291720029,True
+Epidermal,Mesophyll,All organs (surface),Cotyledon/leaf,9.225320036357198,1.085272210708936,10.310592247066134,True
+Meristematic,Mesophyll,Root tip,Cotyledon/leaf,9.431004577387874,0.800874463737844,10.231879041125719,True
+Mesophyll,Epidermal,Cotyledon/leaf,All organs (surface),9.245481828691805,0.8399303935677499,10.085412222259555,True
+Mesophyll,Stele,Cotyledon/leaf,Root/hypocotyl (vascular),9.149369321495445,0.7962122002244705,9.945581521719916,True
+Stele,Epidermal,Root/hypocotyl (vascular),All organs (surface),8.6231180561642,1.2806379911719814,9.90375604733618,True
+Stele,Stele,Root/hypocotyl (vascular),Root/hypocotyl (vascular),8.54435972817656,1.2468921000845563,9.791251828261117,True
+Mesophyll,Mesophyll,Cotyledon/leaf,Cotyledon/leaf,8.80196663148756,0.6711022965949183,9.473068928082478,True
+Stele,Mesophyll,Root/hypocotyl (vascular),Cotyledon/leaf,8.252721406448758,1.0490116506326777,9.301733057081435,True

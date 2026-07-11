@@ -1,0 +1,62 @@
+{
+  "track1_lasso": {
+    "n_samples": 156,
+    "n_flight": 78,
+    "n_ground": 78,
+    "n_studies": 6,
+    "n_features_total": 32548,
+    "n_features_used": 2000,
+    "n_stable_features": 85,
+    "mean_cv_auc": 0.734,
+    "auc_ci": "0.431-1.0",
+    "mean_sensitivity": 0.845,
+    "mean_specificity": 0.67,
+    "top_genes": [
+      "AT4G10250",
+      "AT3G07365",
+      "AT2G14247",
+      "AT4G01390"
+    ],
+    "per_study_auc": {
+      "OSD-37": 0.875,
+      "OSD-678": 0.887,
+      "OSD-38": 0.933,
+      "OSD-321": 0.636,
+      "OSD-120": 0.544,
+      "OSD-624": 0.528
+    }
+  },
+  "track2_scplantllm": {
+    "atlas_cells_total": 41314,
+    "atlas_cells_subsampled": 9998,
+    "embedding_dim": 512,
+    "n_clusters": 6,
+    "ari_vs_celltype": 0.033,
+    "nmi_vs_celltype": 0.04,
+    "zeroshot_accuracy_loose": 0.277,
+    "n_degs_filtered": 260,
+    "inference_time_min": 8.8
+  },
+  "track2_ccc": {
+    "n_lr_interactions": 3140,
+    "n_active_lr_pairs": 2894,
+    "n_signaling_pathways": 15,
+    "top_signal": "Ca2+",
+    "strongest_communicator": "Meristematic",
+    "comm_strength_range": "74-92"
+  },
+  "integration": {
+    "lasso_genes_in_atlas": 74,
+    "lasso_genes_in_ccc_ligands": 3,
+    "lasso_genes_in_ccc_receptors": 0,
+    "lasso_genes_in_cluster_degs": 0,
+    "lasso_genes_missing_from_atlas": 11,
+    "lasso_panel_scores": {
+      "Epidermal": -0.0157,
+      "Mesophyll": -0.0372,
+      "Stele": -0.0789,
+      "Meristematic": -0.0005,
+      "Guard": -0.0442
+    }
+  }
+}

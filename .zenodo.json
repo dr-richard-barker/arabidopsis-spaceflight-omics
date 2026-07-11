@@ -1,0 +1,54 @@
+{
+  "title": "Arabidopsis Spaceflight Omics: LASSO Biomarker Discovery and Single-Cell Atlas Integration",
+  "description": "<p>A multi-track computational pipeline for identifying spaceflight-responsive biomarker genes in <em>Arabidopsis thaliana</em> using NASA OSDR transcriptomic data, validating them against a single-cell seedling atlas with scPlantLLM, and characterizing cell-cell communication patterns with PlantCellChat.</p><p><strong>Track 1</strong> builds an 85-gene LASSO biomarker panel (leave-one-study-out CV AUC = 0.734) from 156 pooled bulk RNA-seq samples across six OSDR studies. <strong>Track 2</strong> applies the scPlantLLM plant foundation model in zero-shot mode to a 9,998-cell seedling atlas and documents cross-tissue domain shift. <strong>Track 3</strong> infers cell-cell communication, finding Ca2+ signaling dominant (strength 249.5), resolves a CBL9-CIPK23-AKT1 Ca2+/K+ crosstalk circuit with guard cells as the primary hub, and maps results onto plant anatomy with ggPlantmap. Includes the full analysis code, data tables, 8 main figures, 48 supplementary figures, 26 supplementary tables, supplementary methods, and the manuscript prepared for npj Microgravity.</p>",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "2.0.0",
+  "language": "eng",
+  "keywords": [
+    "Arabidopsis thaliana",
+    "spaceflight",
+    "microgravity",
+    "single-cell RNA-seq",
+    "LASSO regression",
+    "biomarker discovery",
+    "cell-cell communication",
+    "PlantCellChat",
+    "scPlantLLM",
+    "foundation model",
+    "ggPlantmap",
+    "GO enrichment",
+    "calcium signaling",
+    "NASA OSDR",
+    "GeneLab"
+  ],
+  "creators": [
+    {
+      "name": "Barker, Richard",
+      "affiliation": "GeneLab Plant Analysis Working Group, NASA Open Science Data Repository",
+      "orcid": "0000-0000-0000-0000"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "https://visualization.osdr.nasa.gov/biodata/api/",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "relation": "isDerivedFrom",
+      "identifier": "GSE226097",
+      "resource_type": "dataset",
+      "scheme": "other"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "npj Microgravity (manuscript submitted)",
+      "resource_type": "publication-article",
+      "scheme": "other"
+    }
+  ],
+  "notes": "Data sources: NASA OSDR studies OSD-37, OSD-678, OSD-38, OSD-321, OSD-120, OSD-624 (bulk RNA-seq); GEO GSE226097 seed-to-seed single-cell atlas (Lee et al., Nature Plants 2025). Methods build on scPlantLLM (Cao et al., 2025), PlantCellChat, and ggPlantmap (Jo & Kajala, 2024). Results are discovery-only; no external validation cohort. Replace the placeholder ORCID and add co-authors before minting the DOI."
+}

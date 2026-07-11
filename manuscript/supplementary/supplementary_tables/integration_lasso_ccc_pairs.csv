@@ -1,0 +1,6 @@
+Interaction_name,Signal,Ligand,Receptor,Complex1,Complex2,Agonist,Antagonist,CoAreceptor,CoIreceptor,Evidence,Interaction_type
+AT2G42540_AT3G21630,chitin,AT2G42540,AT3G21630,,,,,,,PMID:25036661,Interacting protein
+AT5G65800_AT1G31420,,AT5G65800,AT1G31420,,,,,,,PMID:29320478,Interacting protein
+AT5G65800_AT2G35620,,AT5G65800,AT2G35620,,,,,,,PMID:29320478,Interacting protein
+AT3G21720_AT2G01950,,AT3G21720,AT2G01950,,,,,,,PMID:26071421,Interacting protein
+AT3G21720_AT5G56290,,AT3G21720,AT5G56290,,,,,,,PMID:24833385,Interacting protein

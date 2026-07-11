@@ -1,0 +1,5 @@
+metric,value
+ARI_leiden_vs_celltype,0.03270316690346032
+NMI_leiden_vs_celltype,0.04032825830489786
+ARI_leiden_vs_zeroshot,0.15351820367767358
+NMI_leiden_vs_zeroshot,0.19801066323408814

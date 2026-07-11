@@ -1,0 +1,16 @@
+{
+  "pathway": "Ca2+ signaling",
+  "total_communication_strength": 249.5,
+  "rank": 1,
+  "comparison": {
+    "Ca2+": 249.5,
+    "BR": 54.5,
+    "flg22": 34.2,
+    "ABA": 33.9,
+    "chitin": 28.1
+  },
+  "biological_mechanism": "Ca2+ is a primary second messenger in plant cells, transducing extracellular stimuli into intracellular responses through cytosolic Ca2+ oscillations and gradients. In the context of spaceflight, Ca2+ signaling is particularly relevant because: (1) gravity perception in plants involves statolith sedimentation in specialized cells, which triggers Ca2+ channel activation; (2) microgravity alters cytosolic Ca2+ oscillation patterns and disrupts the normal Ca2+ gradients that guide directional growth; (3) Ca2+ signaling cascades activate downstream effectors including CBL-CIPK complexes (calcineurin B-like proteins interacting with CBL-interiting protein kinases), calmodulin (CaM), and calcium-dependent protein kinases (CDPKs/CPKs), which regulate stress responses, ion transport, and gene expression.",
+  "ccc_relevance": "The dominance of Ca2+ signaling (249.5 total communication strength, 4.6x the next pathway BR) in the atlas cell-cell communication network indicates that Ca2+-mediated intercellular signaling is the primary communication channel in Arabidopsis seedling tissues. This is consistent with Ca2+ being a central hub in plant environmental signaling, coordinating responses across cell types. The Ca2+ pathway includes ligand-receptor pairs that trigger Ca2+ influx, which then propagates as intercellular Ca2+ waves through plasmodesmata and apoplastic routes.",
+  "connection_to_lasso_genes": "Two of the four top LASSO genes connect to Ca2+ signaling: (1) AT4G10250 (HSP22.0) is induced by Ca2+-dependent stress signaling and participates in ABA-auxin crosstalk, which is downstream of Ca2+ signaling; (2) AT4G01390 (TRAF-like) is a signal transduction protein that may participate in Ca2+-activated stress signaling cascades. The convergence of the LASSO biomarker panel and the dominant CCC pathway on stress signaling is consistent with spaceflight being perceived as a multifaceted stressor.",
+  "key_cbl_cipk_components": "The Ca2+ signaling pathway in the CCC database includes ligand-receptor pairs that activate Ca2+ channels and downstream CBL-CIPK, calmodulin, and CDPK cascades. These regulate ion transporters (including K+, NO3-, Mg2+ transport), stress-responsive gene expression, and hormone signaling crosstalk."
+}
