@@ -18,7 +18,7 @@ dir.create(WORK, showWarnings = FALSE, recursive = TRUE)
 # --- end portable paths ---
 
 invisible(NULL)  # removed sandbox-specific .Rlib path (use environment.R)
-library(tidyverse)
+suppressMessages({library(dplyr);library(tidyr);library(ggplot2);library(stringr);library(tibble);library(purrr)})
 library(igraph)
 library(ggraph)
 library(graphlayouts)
@@ -42,17 +42,17 @@ cat("Ca2+ LR pairs:", nrow(ca2_lr), "| K+ LR pairs:", sum(ca2_lr$Signal == "K+")
 node_defs <- data.frame(
   name = c("Ca2+", "K+",
            # Ca2+ sensors (CBLs)
-           "AT3G51800", "AT5G24270", "AT3G51920",
+           "AT4G17615", "AT5G47100", "AT5G55990",
            # Ca2+ sensor kinases (CIPKs)
-           "AT4G35310", "AT3G17510", "AT1G01140",
+           "AT1G30270", "AT3G17510", "AT1G01140",
            # CaM/CML sensors
-           "AT5G19450", "AT5G55990", "AT5G56030", "AT3G43810", "AT3G56800",
+           "AT1G76650", "AT4G20780", "AT5G37770", "AT3G43810", "AT3G56800",
            # CDPKs
            "AT4G23650", "AT4G09570",
            # Ca2+ downstream targets
-           "AT2G23980", "AT4G19030", "AT2G01980", "AT1G35720",
+           "AT3G51860", "AT1G08090", "AT2G01980", "AT1G35720",
            # K+ channels (ALL 6)
-           "AT2G26650", "AT5G46240", "AT4G18290", "AT5G37500", "AT4G22200", "AT4G30960",
+           "AT2G26650", "AT4G22200", "AT5G37500", "AT5G46240", "AT4G18290", "AT4G32650",
            # LASSO genes
            "AT4G10250", "AT4G01390"),
   alias = c("Ca2+", "K+",
@@ -130,24 +130,24 @@ cat("Primary K+ edges:", nrow(primary_k), "\n")
 
 # 3. Cascade edges (literature: CBL->CIPK->targets)
 cascade_edges <- data.frame(
-  from = c("AT3G51800","AT5G24270","AT3G51920",  # CBLs -> CIPK23
-           "AT3G51800","AT5G24270",               # CBLs -> CIPK9
-           "AT3G51920",                            # CBL2 -> CIPK1
-           "AT4G35310",                            # CIPK23 -> AKT1 (KEY crosstalk)
-           "AT4G35310",                            # CIPK23 -> NRT2.1
-           "AT4G35310",                            # CIPK23 -> CAX3
+  from = c("AT4G17615","AT5G47100","AT5G55990",  # CBLs -> CIPK23
+           "AT4G17615","AT5G47100",               # CBLs -> CIPK9
+           "AT5G55990",                            # CBL2 -> CIPK1
+           "AT1G30270",                            # CIPK23 -> AKT1 (KEY crosstalk)
+           "AT1G30270",                            # CIPK23 -> NRT2.1
+           "AT1G30270",                            # CIPK23 -> CAX3
            "AT1G01140",                            # CIPK9 -> CAX3
            "AT3G17510",                            # CIPK1 -> CAX3
-           "AT5G56030",                            # CML24 -> SOS1
+           "AT5G37770",                            # CML24 -> SOS1
            "AT4G23650","AT4G09570"),               # CDPKs -> targets
-  to = c("AT4G35310","AT4G35310","AT4G35310",
+  to = c("AT1G30270","AT1G30270","AT1G30270",
          "AT1G01140","AT1G01140",
          "AT3G17510",
          "AT2G26650",
-         "AT4G19030",
-         "AT2G23980",
-         "AT2G23980",
-         "AT2G23980",
+         "AT1G08090",
+         "AT3G51860",
+         "AT3G51860",
+         "AT3G51860",
          "AT2G01980",
          "AT4G23650","AT1G35720"),
   label = c(rep("phosphorylates",3), rep("activates",2), "activates",
@@ -164,7 +164,7 @@ branch_edges <- data.frame(
            "AT3G56800",                 # CaM3 -> heat response
            "AT4G23650",                 # CDPK3 -> stress
            "AT1G35720"),                # ANNAT1 -> membrane
-  to = c("AT2G23980","AT4G19030",
+  to = c("AT3G51860","AT1G08090",
          "AT4G10250","AT4G10250","AT4G01390"),
   label = c("regulates","regulates","induces","phosphorylates","interacts"),
   strength = rep(NA, 5), interaction = rep("branch", 5),
@@ -174,12 +174,12 @@ branch_edges <- data.frame(
 
 # 5. K+ channel interaction edges (literature + measured)
 k_channel_edges <- data.frame(
-  from = c("AT4G30960",   # KC1 -> AKT1 (measured K+ CCC, strongest)
-           "AT5G46240",   # AKT2 -> AKT1 (measured K+ CCC)
-           "AT5G24270",   # CBL9 -> AKT1 (CROSSTALK: Ca2+ sensor regulates K+ channel)
-           "AT4G22200",   # KAT2 -> AKT1 (measured K+ CCC)
-           "AT4G18290"),  # GORK -> AKT2 (measured K+ CCC)
-  to = c("AT2G26650","AT2G26650","AT2G26650","AT2G26650","AT5G46240"),
+  from = c("AT4G32650",   # KC1 -> AKT1 (measured K+ CCC, strongest)
+           "AT4G22200",   # AKT2 -> AKT1 (measured K+ CCC)
+           "AT5G47100",   # CBL9 -> AKT1 (CROSSTALK: Ca2+ sensor regulates K+ channel)
+           "AT4G18290",   # KAT2 -> AKT1 (measured K+ CCC)
+           "AT5G37500"),  # GORK -> AKT2 (measured K+ CCC)
+  to = c("AT2G26650","AT2G26650","AT2G26650","AT2G26650","AT4G22200"),
   label = c("interacts","interacts","regulates","interacts","interacts"),
   strength = c(5.01, 1.41, NA, 2.16, 1.01),
   interaction = c("K_CCC","K_CCC","crosstalk","K_CCC","K_CCC"),

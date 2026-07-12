@@ -1,5 +1,5 @@
 """
-Build Figure 8 panel B: CBL9-CIPK23-AKT1 molecular cascade Sankey
+Build Figure 8 panel B: CBL1-CIPK23-AKT1 molecular cascade Sankey
 Using matplotlib bezier patches for full label control (no clipping).
 """
 # --- portable paths (de-sandboxed; replaces /mnt/results and /workspace) ---

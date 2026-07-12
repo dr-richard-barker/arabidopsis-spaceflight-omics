@@ -17,7 +17,7 @@ dir.create(WORK, showWarnings = FALSE, recursive = TRUE)
 # --- end portable paths ---
 
 invisible(NULL)  # removed sandbox-specific .Rlib path (use environment.R)
-library(tidyverse)
+suppressMessages({library(dplyr);library(tidyr);library(ggplot2);library(stringr);library(tibble);library(purrr)})
 library(igraph)
 library(ggraph)
 library(graphlayouts)
@@ -34,7 +34,7 @@ ca2_strength <- ca2_full %>%
   group_by(Interaction_name) %>%
   summarise(total_prob = sum(Prob, na.rm = TRUE)) %>%
   arrange(desc(total_prob))
-ca2_expr <- read.csv(paste0(ATLAS, "/ca2_expanded_expr_per_celltype.csv"),
+ca2_expr <- read.csv(paste0(ATLAS, "/ca2_k_expr_per_celltype.csv"),
                      stringsAsFactors = FALSE, check.names = FALSE)
 
 cat("Ca2+ LR pairs in DB:", nrow(ca2_lr), "\n")
@@ -46,15 +46,15 @@ cat("Measured Ca2+ interactions:", nrow(ca2_strength), "\n\n")
 node_defs <- data.frame(
   name = c("Ca2+",
            # Ca2+ sensors (CBLs)
-           "AT3G51800", "AT5G24270", "AT3G51920",
+           "AT4G17615", "AT5G47100", "AT5G55990",
            # Ca2+ sensor kinases (CIPKs)
-           "AT4G35310", "AT3G17510", "AT1G01140",
+           "AT1G30270", "AT3G17510", "AT1G01140",
            # CaM/CML sensors
-           "AT5G19450", "AT5G55990", "AT5G56030", "AT3G43810", "AT3G56800",
+           "AT1G76650", "AT4G20780", "AT5G37770", "AT3G43810", "AT3G56800",
            # CDPKs
            "AT4G23650", "AT4G09570",
            # Downstream targets
-           "AT2G23980", "AT4G19030", "AT2G01980", "AT1G35720",
+           "AT3G51860", "AT1G08090", "AT2G01980", "AT1G35720",
            # LASSO genes
            "AT4G10250", "AT4G01390"),
   alias = c("Ca2+",
@@ -119,20 +119,20 @@ cat("Primary edges (measured):", nrow(primary_edges), "\n")
 
 # 2. Cascade edges: CBL -> CIPK -> targets (literature-based)
 cascade_edges <- data.frame(
-  from = c("AT3G51800", "AT5G24270", "AT3G51920",  # CBLs -> CIPK23
-           "AT3G51800", "AT5G24270",                 # CBLs -> CIPK9
-           "AT3G51920",                               # CBL2 -> CIPK1
-           "AT4G35310", "AT4G35310",                  # CIPK23 -> targets
+  from = c("AT4G17615", "AT5G47100", "AT5G55990",  # CBLs -> CIPK23
+           "AT4G17615", "AT5G47100",                 # CBLs -> CIPK9
+           "AT5G55990",                               # CBL2 -> CIPK1
+           "AT1G30270", "AT1G30270",                  # CIPK23 -> targets
            "AT1G01140",                               # CIPK9 -> target
            "AT3G17510",                               # CIPK1 -> target
-           "AT5G56030",                               # CML24 -> SOS2 pathway
+           "AT5G37770",                               # CML24 -> SOS2 pathway
            "AT4G23650", "AT4G09570"),                 # CDPKs -> stress
-  to = c("AT4G35310", "AT4G35310", "AT4G35310",
+  to = c("AT1G30270", "AT1G30270", "AT1G30270",
          "AT1G01140", "AT1G01140",
          "AT3G17510",
-         "AT4G19030", "AT2G23980",
-         "AT2G23980",
-         "AT2G23980",
+         "AT1G08090", "AT3G51860",
+         "AT3G51860",
+         "AT3G51860",
          "AT2G01980",
          "AT4G23650", "AT1G35720"),
   label = c(rep("phosphorylates", 3),
@@ -155,7 +155,7 @@ branch_edges <- data.frame(
            "AT3G56800",                 # CaM3 -> heat response
            "AT4G23650",                 # CDPK3 -> stress
            "AT1G35720"),                # ANNAT1 -> membrane
-  to = c("AT2G23980", "AT4G19030",
+  to = c("AT3G51860", "AT1G08090",
          "AT4G10250",
          "AT4G10250",
          "AT4G01390"),
