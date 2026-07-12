@@ -23,7 +23,7 @@ LASSO biomarker panel and single-cell atlas integration reveals Ca2+-dominated c
 5. **Figure5_Ca2_pathway** — Ca2+ signaling: (a) data-driven ggpathway network, (b) conceptual schematic
 6. **Figure6_integration** — Integration: (a) LASSO panel score on leaf, (b) Ca2+ signaling on leaf, (c) gene function table
 7. **Figure7_ca2_k_circuit_composite** — Ca2+/K+ crosstalk signaling circuit
-8. **Figure8_sankey_ca2_k_cascade** — CBL9–CIPK23–AKT1 cascade: KEGG systems biology context (ggKEGG overlay on ath04075), spatial expression, and molecular cascade (Sankey)
+8. **Figure8_sankey_ca2_k_cascade** — CBL1–CIPK23–AKT1 cascade: (a) leaf cross-sections of CIPK23 (guard-highest) and AKT1 (epidermal-highest) expression, (b) molecular-cascade Sankey (guard-cell expression as flow widths)
 
 ### Supplementary Materials (`supplementary/`)
 - **`supplementary_figures/`** — 48 supplementary figure files (PNG + SVG) including:

@@ -87,7 +87,7 @@ for gname, genes in type_groups.items():
     pos += n
 
 plt.colorbar(im, ax=ax, label='Pearson r', shrink=0.7)
-ax.set_title('Ca2+/K+ Pathway Gene Co-expression (all 9,998 cells)', fontweight='bold', fontsize=12, pad=20)
+ax.set_title('Ca2+/K+ Pathway Gene Co-expression (all 41,314 cells)', fontweight='bold', fontsize=12, pad=20)
 fig.tight_layout()
 fig.savefig(f'{FIGDIR}/ca2_k_coexpression_heatmap.png', dpi=300, bbox_inches='tight', facecolor='white')
 fig.savefig(f'{FIGDIR}/ca2_k_coexpression_heatmap.svg', bbox_inches='tight', facecolor='white')
