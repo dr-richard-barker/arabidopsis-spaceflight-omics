@@ -31,7 +31,7 @@ keywords:
   - GO enrichment
   - NASA OSDR
 license: MIT
-version: 2.0.1
+version: 2.0.2
 date-released: "2026-07-11"
 preferred-citation:
   type: article
