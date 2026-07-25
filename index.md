@@ -1,5 +1,6 @@
 ---
 title: Arabidopsis Spaceflight Omics
+layout: cose
 ---
 
 # Arabidopsis Spaceflight Omics
